@@ -1,19 +1,20 @@
 import React from "react";
-import { Grid, Paper } from "@material-ui/core";
+import { List, ListItem, ListItemText } from "@material-ui/core";
 
-const classes = {
-  Paper: {
-    padding: 20,
-    marginTop: 10,
-    marginBottom: 10
-  }
-};
-
-const Menu = ({ style }) => {
+const Menu = () => {
   return (
-    <Grid item sm>
-      <Paper style={style}>Menu Component</Paper>
-    </Grid>
+    <List
+      component="nav"
+      style={{ backgroundColor: "yellow", minHeight: "100vh" }}
+      aria-label="Main mailbox folders"
+    >
+      <ListItem button>
+        <ListItemText primary="Inbox" />
+      </ListItem>
+      <ListItem button>
+        <ListItemText primary="Drafts" />
+      </ListItem>
+    </List>
   );
 };
 
